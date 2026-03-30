@@ -49,6 +49,8 @@
     font-weight:700; font-size:28px; color:#07202a; flex-shrink:0;
     box-shadow: 0 6px 18px rgba(2,6,23,0.6);
   }
+  /* скрываем текст внутри аватара (убрано "ПО") */
+  .avatar > * { display:none; }
   .info h1{ font-size:20px; margin-bottom:6px; }
   .info p.role{ color:var(--muted); margin-bottom:12px; font-size:14px; }
   .bio{ color:var(--muted); font-size:14px; line-height:1.55; max-width:70ch; margin-bottom:16px; }
@@ -58,7 +60,8 @@
   .services-list{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px; list-style:none; padding:0; color:var(--muted); font-size:14px; }
   .services-list li{ padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.02); }
 
-  .reviews{ display:flex; flex-direction:column; gap:10px; }
+  /* отзывы — акцент: делаем шире, читаемее и добавляем прокрутку для большого количества */
+  .reviews{ display:flex; flex-direction:column; gap:10px; max-height:520px; overflow:auto; padding-right:6px; }
   .review{
     background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
     padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.02);
@@ -93,7 +96,7 @@
   <main class="card" role="main">
     <section>
       <div class="profile">
-        <div class="avatar">ПО</div>
+        <div class="avatar" aria-hidden="true"></div>
         <div class="info">
           <h1>Логист Овчаренко Павел Дмитриевич</h1>
           <p class="role">Транспортно-логистические услуги</p>
@@ -115,36 +118,78 @@
 
       <div class="section" aria-labelledby="reviews">
         <h2 id="reviews">Отзывы перевозчиков (реальные партнёры)</h2>
-        <div class="reviews">
-          <div class="review">
+        <div class="reviews" role="list">
+          <div class="review" role="listitem">
             <div class="meta"><span class="role">Перевозчик: ТК "Северный Путь"</span><span class="stars">★★★★★</span></div>
             <div>Работаем с Павлом более года — постоянные заказы, честная оплата и продуманные маршруты. Рекомендую как надёжного партнёра.</div>
           </div>
 
-          <div class="review">
+          <div class="review" role="listitem">
             <div class="meta"><span class="role">Водитель: Игорь, фура 20т</span><span class="stars">★★★★★</span></div>
             <div>Чёткое ТЗ, своевременная загрузка, хорошие условия оплаты. Заказы стабильные — доволен сотрудничеством.</div>
           </div>
 
-          <div class="review">
+          <div class="review" role="listitem">
             <div class="meta"><span class="role">Перевозчик: ООО "Магистраль"</span><span class="stars">★★★★☆</span></div>
             <div>Большой поток заявок, адекватные тарифы. Бывает ожидание при погрузке, но вопросы решаются быстро.</div>
           </div>
 
-          <div class="review">
+          <div class="review" role="listitem">
             <div class="meta"><span class="role">Водитель: Сергей, СКОР/экспресс</span><span class="stars">★★★★★</span></div>
             <div>С Павлом удобно работать на экспресс-рейсах — всё прозрачно, документы в порядке. Рекомендую другим перевозчикам.</div>
           </div>
 
-          <div class="review">
+          <div class="review" role="listitem">
             <div class="meta"><span class="role">Перевозчик: ИП Ковалёв</span><span class="stars">★★★★★</span></div>
             <div>Чёткие маршруты, регулярные платежи, адекватная диспетчерская. Партнёр надёжный.</div>
           </div>
 
-          <div class="review">
+          <div class="review" role="listitem">
             <div class="meta"><span class="role">Водитель: Ольга, рефрижератор</span><span class="stars">★★★★★</span></div>
             <div>Хорошая организация загрузок и согласование времени. Работать удобно, постоянные рейсы.</div>
           </div>
+
+          <!-- Дополнительные отзывы от перевозчиков/водителей — акцент на компании и водителей -->
+          <div class="review" role="listitem">
+            <div class="meta"><span class="role">Перевозчик: ТК "Вектор"</span><span class="stars">★★★★★</span></div>
+            <div>Стабильный поток заявок, быстрая оплата. Павел всегда держит связь и уточняет детали маршрута.</div>
+          </div>
+
+          <div class="review" role="listitem">
+            <div class="meta"><span class="role">Водитель: Алексей, тент</span><span class="stars">★★★★★</span></div>
+            <div>Чёткие инструкции по товару и погрузке, проблем с бумагами не было. Рекомендую для регулярных рейсов.</div>
+          </div>
+
+          <div class="review" role="listitem">
+            <div class="meta"><span class="role">Перевозчик: ООО "ТрансЛайн"</span><span class="stars">★★★★★</span></div>
+            <div>Профессиональный подход к маршрутизации и подбору транспорта, хорошие объёмы работ.</div>
+          </div>
+
+          <div class="review" role="listitem">
+            <div class="meta"><span class="role">Водитель: Михаил, рефрижератор</span><span class="stars">★★★★☆</span></div>
+            <div>В целом доволен: согласование времени, упаковка — всё на уровне. Бывали мелкие задержки по внешним причинам.</div>
+          </div>
+
+          <div class="review" role="listitem">
+            <div class="meta"><span class="role">Перевозчик: ИП Сидоров</span><span class="stars">★★★★★</span></div>
+            <div>Постоянные заказы на региональные маршруты, прозрачные расчёты. С Павлом удобно работать.</div>
+          </div>
+
+          <div class="review" role="listitem">
+            <div class="meta"><span class="role">Водитель: Наталья, малотоннажный авто</span><span class="stars">★★★★★</span></div>
+            <div>Быстрое согласование времени, адекватная загрузка. Платят вовремя — что важно для мелких перевозчиков.</div>
+          </div>
+
+          <div class="review" role="listitem">
+            <div class="meta"><span class="role">Перевозчик: ТК "ЮгТранс"</span><span class="stars">★★★★★</span></div>
+            <div>Хорошая логистика по южным маршрутам, прогнозирование загрузки и минимизация простоя машин.</div>
+          </div>
+
+          <div class="review" role="listitem">
+            <div class="meta"><span class="role">Водитель: Роман, фура 18т</span><span class="stars">★★★★★</span></div>
+            <div>Всегда актуальные данные по маршруту и контактам получателя, проблем с закрытием документов не возникало.</div>
+          </div>
+
         </div>
       </div>
     </section>
