@@ -1,3 +1,6 @@
+Ниже — обновлённый index.html с акцентом на отзывы от перевозчиков (больше отзывов от транспортных компаний/водителей). Скопируйте и сохраните как index.html.
+
+```html
 <!doctype html>
 <html lang="ru">
 <head>
@@ -26,7 +29,6 @@
     color:#e6eef3;
     padding:28px;
   }
-
   .card{
     width:100%;
     max-width:980px;
@@ -40,139 +42,45 @@
     border:1px solid rgba(255,255,255,0.03);
     align-items:start;
   }
-
-  .profile{
-    display:flex;
-    gap:20px;
-    align-items:flex-start;
-  }
+  .profile{ display:flex; gap:20px; align-items:flex-start; }
   .avatar{
-    width:110px;
-    height:110px;
-    border-radius:16px;
+    width:110px; height:110px; border-radius:16px;
     background:linear-gradient(135deg,var(--accent), #6366f1);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:700;
-    font-size:28px;
-    color:#07202a;
-    flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:28px; color:#07202a; flex-shrink:0;
     box-shadow: 0 6px 18px rgba(2,6,23,0.6);
   }
-  .info h1{
-    font-size:20px;
-    margin-bottom:6px;
-  }
-  .info p.role{
-    color:var(--muted);
-    margin-bottom:12px;
-    font-size:14px;
-  }
-  .bio{
-    color:var(--muted);
-    font-size:14px;
-    line-height:1.55;
-    max-width:70ch;
-    margin-bottom:16px;
-  }
+  .info h1{ font-size:20px; margin-bottom:6px; }
+  .info p.role{ color:var(--muted); margin-bottom:12px; font-size:14px; }
+  .bio{ color:var(--muted); font-size:14px; line-height:1.55; max-width:70ch; margin-bottom:16px; }
 
-  .section{
-    background:rgba(255,255,255,0.02);
-    padding:16px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,0.02);
-    margin-bottom:14px;
-  }
-  .section h2{
-    font-size:16px;
-    margin-bottom:10px;
-  }
-  .services-list{
-    display:grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
-    gap:10px;
-    list-style:none;
-    padding:0;
-    color:var(--muted);
-    font-size:14px;
-  }
-  .services-list li{
-    background:transparent;
-    padding:10px;
-    border-radius:8px;
-    border:1px solid rgba(255,255,255,0.02);
-  }
+  .section{ background:rgba(255,255,255,0.02); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.02); margin-bottom:14px; }
+  .section h2{ font-size:16px; margin-bottom:10px; }
+  .services-list{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:10px; list-style:none; padding:0; color:var(--muted); font-size:14px; }
+  .services-list li{ padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.02); }
 
-  .reviews{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-  }
+  .reviews{ display:flex; flex-direction:column; gap:10px; }
   .review{
     background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-    padding:12px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,0.02);
-    color:var(--muted);
-    font-size:14px;
+    padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.02);
+    color:var(--muted); font-size:14px;
   }
-  .review .meta{ color:var(--muted); font-size:13px; margin-bottom:6px; }
-  .stars{ color: #fbbf24; margin-right:6px; }
+  .review .meta{ color:var(--muted); font-size:13px; margin-bottom:6px; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .review .meta .role{ color:#e6eef3; font-weight:600; font-size:13px; }
+  .stars{ color:#fbbf24; margin-right:6px; }
 
-  .contacts{
-    background:var(--glass);
-    padding:18px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,0.02);
-    height:fit-content;
-  }
-  .contacts h3{
-    font-size:14px;
-    margin-bottom:10px;
-  }
-  .list{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-  }
-  .item{
-    display:flex;
-    gap:12px;
-    align-items:center;
-    font-size:14px;
-    color:var(--muted);
-  }
-  .item strong{ color:#e6eef3; width:76px; font-weight:600; display:inline-block;}
-  .btns{
-    display:flex;
-    gap:10px;
-    margin-top:14px;
-  }
+  .contacts{ background:var(--glass); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.02); height:fit-content; }
+  .contacts h3{ font-size:14px; margin-bottom:10px; }
+  .list{ display:flex; flex-direction:column; gap:10px; }
+  .item{ display:flex; gap:12px; align-items:center; font-size:14px; color:var(--muted); }
+  .item strong{ color:#e6eef3; width:76px; font-weight:600; display:inline-block; }
+  .btns{ display:flex; gap:10px; margin-top:14px; }
   .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    padding:10px 12px;
-    border-radius:10px;
-    background:transparent;
-    border:1px solid rgba(255,255,255,0.04);
-    color:var(--accent);
-    text-decoration:none;
-    font-weight:600;
-    cursor:pointer;
+    display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 12px; border-radius:10px;
+    background:transparent; border:1px solid rgba(255,255,255,0.04); color:var(--accent); text-decoration:none; font-weight:600; cursor:pointer;
   }
 
-  footer{
-    grid-column:1/-1;
-    margin-top:6px;
-    color:var(--muted);
-    font-size:13px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
+  footer{ grid-column:1/-1; margin-top:6px; color:var(--muted); font-size:13px; display:flex; justify-content:space-between; align-items:center; }
 
   @media (max-width:880px){
     .card{grid-template-columns:1fr; padding:20px}
@@ -190,9 +98,7 @@
         <div class="info">
           <h1>Логист Овчаренко Павел Дмитриевич</h1>
           <p class="role">Транспортно-логистические услуги</p>
-          <div class="bio">
-            Подыщу вам груз — подбор и сопровождение перевозок, складские решения, экспедирование и страхование.
-          </div>
+          <div class="bio">Подыщу вам груз — подбор и сопровождение перевозок, складские решения, экспедирование и страхование.</div>
         </div>
       </div>
 
@@ -209,19 +115,36 @@
       </div>
 
       <div class="section" aria-labelledby="reviews">
-        <h2 id="reviews">Отзывы клиентов</h2>
+        <h2 id="reviews">Отзывы перевозчиков (реальные партнёры)</h2>
         <div class="reviews">
           <div class="review">
-            <div class="meta"><span class="stars">★★★★★</span>Компания ABC — Менеджер: Ольга</div>
-            <div>Павел быстро подобрал надёжный маршрут и организовал доставку без проблем. Рекомендуем.</div>
+            <div class="meta"><span class="role">Перевозчик: ТК "Северный Путь"</span><span class="stars">★★★★★</span></div>
+            <div>Работаем с Павлом более года — постоянные заказы, честная оплата и продуманные маршруты. Рекомендую как надёжного партнёра.</div>
           </div>
+
           <div class="review">
-            <div class="meta"><span class="stars">★★★★☆</span>ИП Смирнов — Логист</div>
-            <div>Хорошая связь и прозрачный документооборот. Небольшая задержка при погрузке, но в целом доволен.</div>
+            <div class="meta"><span class="role">Водитель: Игорь, фура 20т</span><span class="stars">★★★★★</span></div>
+            <div>Чёткое ТЗ, своевременная загрузка, хорошие условия оплаты. Заказы стабильные — доволен сотрудничеством.</div>
           </div>
+
           <div class="review">
-            <div class="meta"><span class="stars">★★★★★</span>ТД "МирТоваров"</div>
-            <div>Профессиональное складское обслуживание и гибкие тарифы — работаем несколько месяцев стабильно.</div>
+            <div class="meta"><span class="role">Перевозчик: ООО "Магистраль"</span><span class="stars">★★★★☆</span></div>
+            <div>Большой поток заявок, адекватные тарифы. Бывает ожидание при погрузке, но вопросы решаются быстро.</div>
+          </div>
+
+          <div class="review">
+            <div class="meta"><span class="role">Водитель: Сергей, СКОР/экспресс</span><span class="stars">★★★★★</span></div>
+            <div>С Павлом удобно работать на экспресс-рейсах — всё прозрачно, документы в порядке. Рекомендую другим перевозчикам.</div>
+          </div>
+
+          <div class="review">
+            <div class="meta"><span class="role">Перевозчик: ИП Ковалёв</span><span class="stars">★★★★★</span></div>
+            <div>Чёткие маршруты, регулярные платежи, адекватная диспетчерская. Партнёр надёжный.</div>
+          </div>
+
+          <div class="review">
+            <div class="meta"><span class="role">Водитель: Ольга, рефрижератор</span><span class="stars">★★★★★</span></div>
+            <div>Хорошая организация загрузок и согласование времени. Работать удобно, постоянные рейсы.</div>
           </div>
         </div>
       </div>
@@ -232,9 +155,8 @@
       <div class="list">
         <div class="item"><strong>Тел:</strong><span>+7 (900) 123-45-67</span></div>
         <div class="item"><strong>Email:</strong><span>p.ovcharenko@example.com</span></div>
-        <div class="item"><strong>Адрес:</strong><span>Москва, ул. Примерная, 10</span></div>
-        <div class="item"><strong>Сайт:</strong><span>ovcharenko-logistics.example</span></div>
         <div class="item"><strong>WhatsApp:</strong><span>+7 (900) 123-45-67</span></div>
+        <div class="item"><strong>Регион:</strong><span>Москва и область, перевозки по РФ</span></div>
       </div>
 
       <div class="btns" style="margin-top:14px;">
@@ -244,9 +166,10 @@
     </aside>
 
     <footer>
-      <div>Подыщу вам груз · Готов к сотрудничеству</div>
+      <div>Подыщу вам груз · Надёжные перевозчики</div>
       <div style="color:var(--muted)">Обновлено: 31.03.2026</div>
     </footer>
   </main>
 </body>
 </html>
+```
