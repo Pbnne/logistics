@@ -1,6 +1,6 @@
-Ниже — обновлённый index.html с акцентом на отзывы от перевозчиков (больше отзывов от транспортных компаний/водителей). Скопируйте и сохраните как index.html.
+**Creating updated HTML**
 
-```html
+I need to provide an updated full HTML with modified body CSS. Keeping it concise is key, and I'll use a code block format for clarity. I should include the date in the footer (31.03.2026) as required. The main change is aligning items to flex-start and adding 20px padding. I’ll also consider whether to set the max-width or margin, but since the user asked specifically for those changes, I’ll focus on that. I’ll just provide the code.```html
 <!doctype html>
 <html lang="ru">
 <head>
@@ -20,15 +20,16 @@
   body{
     min-height:100vh;
     display:flex;
-    align-items:center;
+    align-items:flex-start;
     justify-content:center;
     background:
       radial-gradient(800px 400px at 10% 10%, rgba(6,182,212,0.06), transparent 8%),
       radial-gradient(700px 350px at 90% 90%, rgba(99,102,241,0.04), transparent 8%),
       var(--bg);
     color:#e6eef3;
-    padding:28px;
+    padding:20px;
   }
+
   .card{
     width:100%;
     max-width:980px;
@@ -42,6 +43,7 @@
     border:1px solid rgba(255,255,255,0.03);
     align-items:start;
   }
+
   .profile{ display:flex; gap:20px; align-items:flex-start; }
   .avatar{
     width:110px; height:110px; border-radius:16px;
